@@ -1,5 +1,5 @@
-import { Redirect } from 'expo-router';
+import { Link } from 'expo-router';
 
 export default function About() {
-  return <Redirect href="/details" />;
+  return <Link href="/details" prefetch>Go to Details</Link>;
 }
