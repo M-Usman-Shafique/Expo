@@ -5,9 +5,9 @@ export default function Home() {
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Homepage</Text>
-      <Link href="/about" style={styles.link}>Go to About</Link>
-      <Link href="/(tabs)/home" style={styles.link}>Go to Tabs</Link>
-      <Link href="/(drawer)/home" style={styles.link}>Go to Drawer</Link>
+      <Link href="/user/john/male/20" style={styles.link}>Go to User1</Link>
+      <Link href="/user/sara/female/25" style={styles.link}>Go to User2</Link>
+      <Link href="/user/neil/20/kid" style={styles.link}>Go to User3</Link>
     </View>
   );
 }

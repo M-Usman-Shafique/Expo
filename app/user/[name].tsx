@@ -2,7 +2,7 @@ import { Link, router, useLocalSearchParams } from 'expo-router';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 export default function User() {
-    const { name, limit } = useLocalSearchParams();
+    const { name, limit } = useLocalSearchParams<{ name: string, limit: string}>();
     console.log(limit)
 
     const increaseLimit = () => {
@@ -15,7 +15,7 @@ export default function User() {
         <Link
           href={{
             pathname: '/user/[name]',
-            params: { name: String(name), limit: 50 }
+            params: { name, limit: 50 }
           }}
           style={styles.link}
         >
