@@ -1,13 +1,29 @@
-import { Link, useLocalSearchParams } from 'expo-router';
-import { StyleSheet, Text, View } from 'react-native';
+import { Link, router, useLocalSearchParams } from 'expo-router';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 export default function User() {
     const { name, limit } = useLocalSearchParams();
     console.log(limit)
+
+    const increaseLimit = () => {
+      router.setParams({ limit: 50 });
+    }
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Hello, {name}</Text>
         <Link href="/" style={styles.link}>Go to Home</Link>
+        <Link
+          href={{
+            pathname: '/user/[name]',
+            params: { name: String(name), limit: 50 }
+          }}
+          style={styles.link}
+        >
+          View more pages
+        </Link>
+        <Pressable onPress={increaseLimit}>
+          <Text>View more pages</Text>
+        </Pressable>
     </View>
   )
 }
