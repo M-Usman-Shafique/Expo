@@ -3,17 +3,18 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 
 export default function Home() {
   const username = "Usman";
+  const pages = 10;
 
   const gotoUser = () => {
       router.navigate({
         pathname: '/user/[name]',
-        params: { name: username }
+        params: { name: username, limit: pages }
       })
   }
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Homepage</Text>
-      <Link href={`/user/${username}`} style={styles.link}>Go to Profile</Link>
+      <Link href={`/user/${username}?limit=${pages}`} style={styles.link}>Go to Profile</Link>
       <Pressable onPress={gotoUser}>
         <Text>View Profile</Text>
       </Pressable>

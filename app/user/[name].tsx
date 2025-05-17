@@ -1,8 +1,9 @@
-import { StyleSheet, Text, View } from 'react-native'
-import { Link, useLocalSearchParams } from 'expo-router'
+import { Link, useLocalSearchParams } from 'expo-router';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function User() {
-    const { name } = useLocalSearchParams();
+    const { name, limit } = useLocalSearchParams();
+    console.log(limit)
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Hello, {name}</Text>
