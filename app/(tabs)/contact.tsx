@@ -1,12 +1,11 @@
-import { Link } from 'expo-router'
 import { StyleSheet, Text, View } from 'react-native'
+import { Link } from 'expo-router'
 
-export default function Group() {
+export default function Contact() {
   return (
     <View style={styles.container}>
-      <Text style={styles.heading}>Group</Text>
-      <Link href="/(groups)/profile" style={styles.link}>Go to Profile</Link>
-      <Link href="../" style={styles.link}>Go to Home</Link>
+      <Text style={styles.heading}>Contact</Text>
+      <Link href="/(tabs)/home" style={styles.link}>Go to Tabs Home</Link>
     </View>
   )
 }

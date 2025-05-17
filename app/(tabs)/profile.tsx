@@ -5,7 +5,7 @@ export default function Profile() {
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Profile</Text>
-      <Link href="/(groups)/contact" style={styles.link}>Go to Contact</Link>
+      <Link href="/(tabs)/contact" style={styles.link}>Go to Contact</Link>
     </View>
   )
 }
