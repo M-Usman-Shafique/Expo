@@ -5,9 +5,7 @@ export default function Home() {
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Homepage</Text>
-      <Link href="/user/john/male/20" style={styles.link}>Go to User1</Link>
-      <Link href="/user/sara/female/25" style={styles.link}>Go to User2</Link>
-      <Link href="/user/neil/20/kid" style={styles.link}>Go to User3</Link>
+      <Link href="/no-where" style={styles.link}>Go to Nowhere</Link>
     </View>
   );
 }
