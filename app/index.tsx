@@ -1,23 +1,12 @@
-import { Link, router } from "expo-router";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Link } from "expo-router";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function Home() {
-  const username = "Usman";
-  const pages = 10;
 
-  const gotoUser = () => {
-      router.navigate({
-        pathname: '/user/[name]',
-        params: { name: username, limit: pages }
-      })
-  }
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Homepage</Text>
-      <Link href={`/user/${username}?limit=${pages}`} style={styles.link}>Go to Profile</Link>
-      <Pressable onPress={gotoUser}>
-        <Text>View Profile</Text>
-      </Pressable>
+      <Link href="/about" style={styles.link}>Go to About</Link>
     </View>
   );
 }
