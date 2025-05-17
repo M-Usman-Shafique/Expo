@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Homepage</Text>
-      <Link href="/no-where" style={styles.link}>Go to Nowhere</Link>
+      <Link href="/products/home" style={styles.link}>Go to Products</Link>
     </View>
   );
 }

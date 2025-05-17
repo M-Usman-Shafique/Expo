@@ -1,10 +1,10 @@
 import { Link } from 'expo-router'
 import { StyleSheet, Text, View } from 'react-native'
 
-export default function NotFound() {
+export default function Products() {
   return (
     <View style={styles.container}>
-      <Text style={styles.heading}>Not Found</Text>
+      <Text style={styles.heading}>Products</Text>
       <Link href="/" style={styles.link}>Go to Home</Link>
     </View>
   )
