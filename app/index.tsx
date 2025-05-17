@@ -7,6 +7,7 @@ export default function Home() {
       <Text style={styles.heading}>Homepage</Text>
       <Link href="/about" style={styles.link}>Go to About</Link>
       <Link href="/(tabs)/home" style={styles.link}>Go to Tabs</Link>
+      <Link href="/(drawer)/home" style={styles.link}>Go to Drawer</Link>
     </View>
   );
 }
