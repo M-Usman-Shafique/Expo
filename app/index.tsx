@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Homepage</Text>
-      <Link href="/login" push style={styles.link}>Go to Login</Link>
-      <Link href="/(tabs)/home" style={styles.link}>Go to Tabs Home</Link>
+      <Link href="/scrollView/verticalScroll" style={styles.link}>Vertical Scroll View</Link>
+      <Link href="/scrollView/horizontalScroll" style={styles.link}>Horizontal Scroll View</Link>
     </View>
   );
 }
