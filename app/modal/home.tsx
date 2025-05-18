@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import { View, Button, Text, StyleSheet, Dimensions } from 'react-native';
+import { View, Button, Text, StyleSheet } from 'react-native';
 import Modal from 'react-native-modal';
-
-const { height: SCREEN_HEIGHT } = Dimensions.get('window');
 
 export default function ModalPage() {
   const [open, setOpen] = useState(false);
@@ -14,18 +12,16 @@ export default function ModalPage() {
   return (
     <View style={styles.container}>
       <Button title="Open Modal" onPress={toggleModal} />
-
       <Modal
         isVisible={open}
         onBackdropPress={toggleModal}
-        onBackButtonPress={toggleModal}
-        onSwipeComplete={toggleModal}
-        swipeDirection="down"
-        style={styles.modal}
+        useNativeDriver
+        animationIn="zoomIn"
+        animationOut="zoomOut"
       >
         <View style={styles.modalContent}>
-          <Text style={styles.modalText}>This is a sliding modal.</Text>
-          <Button title="Close Modal" onPress={toggleModal} />
+          <Text style={styles.modalText}>Hello from Modal!</Text>
+          <Button title="Close" onPress={toggleModal} />
         </View>
       </Modal>
     </View>
@@ -38,20 +34,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 20,
   },
-  modal: {
-    justifyContent: 'flex-end',
-    margin: 0,
-  },
   modalContent: {
-    height: SCREEN_HEIGHT * 0.5,
     backgroundColor: 'white',
     padding: 24,
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
+    borderRadius: 10,
+    alignItems: 'center',
   },
   modalText: {
     fontSize: 18,
     marginBottom: 12,
-    textAlign: 'center',
   },
 });
