@@ -1,4 +1,4 @@
-import YCard from '@/components/YCard'
+import XCard from '@/components/XCard'
 import { Link } from 'expo-router'
 import { FlatList, StyleSheet, Text, View } from 'react-native'
 
@@ -8,9 +8,11 @@ export default function VerticalScroll() {
       <Text style={styles.heading}>Vertical Scroll View</Text>
       
       <FlatList
-        data={Array.from({ length: 50 })}
+        data={Array.from({ length: 48 })}
         keyExtractor={(_, index) => index.toString()}
-        renderItem={() => <YCard />}
+        renderItem={() => <XCard />}
+        numColumns={3}
+        columnWrapperStyle={styles.row}
         showsVerticalScrollIndicator={false}
       />
 
@@ -22,7 +24,7 @@ export default function VerticalScroll() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20,
+    paddingLeft: 18,
   },
   heading: {
     fontSize: 28,
@@ -30,6 +32,9 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     marginTop: 10,
     textAlign: "center",
+  },
+  row: {
+    marginBottom: 12,
   },
   link: {
     textDecorationLine: "underline",
