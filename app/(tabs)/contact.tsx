@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Contact</Text>
-      <Link href="/(tabs)/home" style={styles.link}>Go to Tabs Home</Link>
+      <Link href="/home" style={styles.link}>Go to Tabs Home</Link>
     </View>
   )
 }

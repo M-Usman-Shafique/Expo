@@ -6,7 +6,7 @@ export default function TabsHome() {
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Tabs Home</Text>
-      <Link href="/(tabs)/profile" style={styles.link}>Go to Profile</Link>
+      <Link href="/profile" style={styles.link}>Go to Profile</Link>
       <Link href="/" style={styles.link}>Go to Home</Link>
     </View>
   )
