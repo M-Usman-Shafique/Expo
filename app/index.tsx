@@ -5,8 +5,7 @@ export default function Home() {
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Homepage</Text>
-      <Link href="/scrollView/verticalScroll" style={styles.link}>Vertical Scroll View</Link>
-      <Link href="/scrollView/horizontalScroll" style={styles.link}>Horizontal Scroll View</Link>
+      <Link href="../modal/home" style={styles.link}>Go to Modal</Link>
     </View>
   );
 }
