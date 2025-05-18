@@ -1,17 +1,18 @@
 import YCard from '@/components/YCard'
 import { Link } from 'expo-router'
-import { ScrollView, StyleSheet, Text, View } from 'react-native'
+import { FlatList, StyleSheet, Text, View } from 'react-native'
 
 export default function VerticalScroll() {
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Vertical Scroll View</Text>
       
-      <ScrollView showsVerticalScrollIndicator={false}>
-        {Array.from({ length: 50 }).map((_, i) => (
-          <YCard key={i} />
-        ))}
-      </ScrollView>
+      <FlatList
+        data={Array.from({ length: 50 })}
+        keyExtractor={(_, index) => index.toString()}
+        renderItem={() => <YCard />}
+        showsVerticalScrollIndicator={false}
+      />
 
       <Link href="/" style={styles.link}>Go to Home</Link>
     </View>
