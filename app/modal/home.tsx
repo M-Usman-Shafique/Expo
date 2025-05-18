@@ -16,11 +16,12 @@ export default function ModalPage() {
         isVisible={open}
         onBackdropPress={toggleModal}
         useNativeDriver
-        animationIn="zoomIn"
-        animationOut="zoomOut"
+        animationIn="slideInUp"
+        animationOut="slideOutDown"
+        style={styles.modalWrapper}
       >
         <View style={styles.modalContent}>
-          <Text style={styles.modalText}>Hello from Modal!</Text>
+          <Text style={styles.modalText}>Sliding Centered Modal.</Text>
           <Button title="Close" onPress={toggleModal} />
         </View>
       </Modal>
@@ -34,11 +35,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 20,
   },
+  modalWrapper: {
+    justifyContent: 'center',
+    margin: 0,
+  },
   modalContent: {
     backgroundColor: 'white',
     padding: 24,
-    borderRadius: 10,
+    borderRadius: 12,
     alignItems: 'center',
+    marginHorizontal: 30,
   },
   modalText: {
     fontSize: 18,
