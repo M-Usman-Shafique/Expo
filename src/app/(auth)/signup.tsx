@@ -1,7 +1,7 @@
-import CustomButton from '@/components/CustomButton'
-import CustomInput from '@/components/CustomInput'
-import { Link, router } from 'expo-router'
-import { StyleSheet, Text, View } from 'react-native'
+import CustomButton from '@/src/components/CustomButton';
+import CustomInput from '@/src/components/CustomInput';
+import { Link, router } from 'expo-router';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function Signup() {
   const signup = () => {

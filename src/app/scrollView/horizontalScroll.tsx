@@ -1,6 +1,6 @@
-import { Link } from 'expo-router'
-import { FlatList, StyleSheet, Text, View } from 'react-native'
-import XCard from '@/components/XCard'
+import XCard from '@/src/components/XCard';
+import { Link } from 'expo-router';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
 
 export default function HorizontalScroll() {
   return (
